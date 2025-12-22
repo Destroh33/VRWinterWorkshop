@@ -58,6 +58,7 @@ public class Gun : MonoBehaviour
 
     void OnGrab(SelectEnterEventArgs args)
     {
+        isHeld = true;
         inputInteractorForHaptics = args.interactorObject as XRBaseInputInteractor;
         handVisual = args.interactorObject.transform.GetComponentInParent<HandControllerVisual>();
         if (handVisual != null)
